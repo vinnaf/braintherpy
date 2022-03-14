@@ -1,0 +1,1 @@
+print('kitartás és kemény munka meghozza a gyümöcsét')
