@@ -1,4 +1,13 @@
 import pandas as pd
 
 
-print('kitartás és kemény munka meghozza a gyümöcsét neked a gyümöcsödet majom')
+
+
+
+
+
+
+data = pd.read_csv('data/CB22_880218_220309132407_Small.csv', encoding = "ISO-8859-1", low_memory=False)
+
+
+print(data)
