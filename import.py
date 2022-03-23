@@ -21,9 +21,9 @@ class Measurement: #i'm trying to do everything with a class but wouldn't it be 
         self.waveform_t =records[18][2]
         self.fund_A= records[19][2]
         self.waveform_A = records[20][2]
-        self.recorded_waveform=records[27:456][0:1]
-        self.raw_waveform = records[458:98202][0:1]
-        self.pupil_waveform = records[98204:][0]
+        self.recorded_waveform=records[27:456,0:2]
+        self.raw_waveform = records[458:98202,0:2]
+        self.pupil_waveform = records[98204:,0] #I should drop NaN
 
     #order by date (ascending)
 
@@ -75,7 +75,7 @@ def read_data(path):
 
 path = r'C:\Users\veres\PycharmProjects\braintherpy\data'
 read_data(path)
-print(d['CB08'][1].recorded_waveform)
+print(d['CB08'][1].pupil_waveform)
 
 
 
